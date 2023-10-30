@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NewsApp</title>
+    <link rel="icon" href="icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&family=Rakkas&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="main-nav container flex">
+        <div class="logo-container">
+          <a href="#" onclick="reload()" class="company-logo">
+            <img src="Logo.png" alt="company logo" />
+          </a>
+        </div>
+      </div>
+      <div class="search-bar container">
+        <input
+          type="text"
+          id="search-text"
+          class="news-input"
+          placeholder="e.g. Science"
+        />
+        <button id="search-button">Search</button>
+      </div>
+    </nav>
+
+    <div id="categories" class="container flex">
+      <div class="cat" id="politics" onclick="onNavItemClick('politics')">
+        <div>Politics</div>
+      </div>
+      <div class="cat" id="finance" onclick="onNavItemClick('finance')">
+        <div>Finance</div>
+      </div>
+      <div class="cat" id="science" onclick="onNavItemClick('science')">
+        <div>Science</div>
+      </div>
+      <div
+        class="cat"
+        id="entertainment"
+        onclick="onNavItemClick('entertainment')"
+      >
+        <div>Entertainment</div>
+      </div>
+      <div class="cat" id="sports" onclick="onNavItemClick('sports')">
+        <div>Sports</div>
+      </div>
+    </div>
+
+    <main>
+      <div class="cards-container container flex" id="cards-container"></div>
+    </main>
+
+    <template id="template-news-card">
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://via.placeholder.com/400x200"
+            alt="news-image"
+            srcset=""
+            id="news-img"
+          />
+        </div>
+        <div class="card-content">
+          <h3 id="news-title">This is the Title</h3>
+          <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+          <p class="new-desc" id="news-desc">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat
+            quasi ratione debitis natus assumenda dicta quos ea, dignissimos,
+            reiciendis et laboriosam nemo sapiente vitae. Voluptas perferendis
+            natus ipsum placeat. Laudantium?
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
